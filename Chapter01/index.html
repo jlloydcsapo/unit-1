@@ -13,16 +13,54 @@
         
         <!--you can also place internal styles here
         place these within <style> tags-->  
+        <style>
+            #mydiv {
+                background-color: red;
+                width: 80%;
+                margin: 5 auto;
+                height: 100px;
+            }
+
+            .classdiv {
+                background-color: aqua;
+                width: 30%;
+                margin: 10 px;
+                margin-top: 10px;
+                height: 400px;
+            }
+
+        </style>
+
         
     </head>
 
     <body>
-        <!--put your initial page content here-->
-        
-        <!--you can also use this space for internal scripts;
-        place these within <script> tags-->
+        <div id="mydiv">
+            Hello world, let's learn GIS scripting
+        </div>
 
-        <!--put your external script links here-->
-        <script type="text/javascript" src="js/main.js"></script>
+        <div class="classdiv">
+            Test div
+        </div>
+        <div class="classdiv">
+            test div
+        </div>
+        <script>
+            var mydiv = document.getElementById("mydiv");
+            mydiv.addEventListener("click", function(){
+              alert("Hello World! You're doing it");  
+            });
+
+            var classdivs = document.getElementsByClassName("classdiv");
+
+            var writeFunction = function() {
+                document.write("How about this?");
+            };
+
+            for (var i = 0; i < classdivs.length; i++) {
+                classdivs[i].addEventListener('dblclick', writeFunction);
+            }
+
+        </script>
     </body>
 </html>
