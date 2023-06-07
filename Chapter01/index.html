@@ -7,60 +7,23 @@
 
         <!--put your external stylesheet links here-->
         <link rel="stylesheet" href="css/style.css">
+
         <!--[if IE<9]>
             <link rel="stylesheet" href="css/style.ie.css">
         <![endif]-->
-        
+
+
         <!--you can also place internal styles here
         place these within <style> tags-->  
-        <style>
-            #mydiv {
-                background-color: red;
-                width: 80%;
-                margin: 5 auto;
-                height: 100px;
-            }
-
-            .classdiv {
-                background-color: aqua;
-                width: 30%;
-                margin: 10 px;
-                margin-top: 10px;
-                height: 400px;
-            }
-
-        </style>
+       
 
         
     </head>
 
     <body>
         <div id="mydiv">
-            Hello world, let's learn GIS scripting
+          
         </div>
-
-        <div class="classdiv">
-            Test div
-        </div>
-        <div class="classdiv">
-            test div
-        </div>
-        <script>
-            var mydiv = document.getElementById("mydiv");
-            mydiv.addEventListener("click", function(){
-              alert("Hello World! You're doing it");  
-            });
-
-            var classdivs = document.getElementsByClassName("classdiv");
-
-            var writeFunction = function() {
-                document.write("How about this?");
-            };
-
-            for (var i = 0; i < classdivs.length; i++) {
-                classdivs[i].addEventListener('dblclick', writeFunction);
-            }
-
-        </script>
+        <script src="js/main_with_debug.js"></script>
     </body>
 </html>
